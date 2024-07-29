@@ -2,7 +2,7 @@ const quote = document.getElementById("quote");
 const author = document.getElementById("author");
 
 const api_url = "https://api.api-ninjas.com/v1/quotes?category=happiness";
-const api_key = "PBGkAT0KXOT/sWm5Dil+bg==zoKxgVGLxAyy7mFb"; // کلید API خود را اینجا قرار دهید
+const api_key = "PBGkAT0KXOT/sWm5Dil+bg==zoKxgVGLxAyy7mFb"; // Place your API key here
 
 async function getquote(url) {
     try {
@@ -14,18 +14,18 @@ async function getquote(url) {
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        var data = await response.json();
+        const data = await response.json();
         console.log(data);
         if (data.length > 0) {
             quote.innerHTML = data[0].quote;
             author.innerHTML = data[0].author;
         } else {
-            quote.innerHTML = "نقل قولی یافت نشد.";
+            quote.innerHTML = "No quote found.";
             author.innerHTML = "";
         }
     } catch (error) {
         console.error("Error fetching quote:", error);
-        quote.innerHTML = "خطایی در دریافت نقل قول رخ داده است.";
+        quote.innerHTML = "An error occurred while fetching the quote.";
         author.innerHTML = "";
     }
 }
