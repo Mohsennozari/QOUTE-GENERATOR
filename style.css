@@ -13,7 +13,7 @@ body {
   background: linear-gradient(45deg, rgb(95, 83, 14), rgb(255, 246, 194));
   width: 700px;
   position: absolute;
-  top: 35%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
@@ -113,63 +113,4 @@ body {
   background: rgb(221, 221, 221);
   color: #000000;
   font-weight: 600;
-}
-
-.cube {
-  display: flex;
-  z-index: index;
-  position: relative;
-  margin-left: 120px;
-  margin-top: -900px;
-  width: 100px;
-  height: 100px;
-  transform-style: preserve-3d;
-  transform: rotateX(0deg) rotateY(0deg);
-  animation: rotate 6s infinite linear;
-}
-
-@media only screen and (max-width: 1000px) {
-  .cube {
-    display: none;
-  }
-}
-.face {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: linear-gradient(rgb(16, 231, 213), rgb(0, 121, 219));
-  border: 1px solid rgba(2, 2, 2, 0.1921568627);
-}
-
-.front {
-  transform: rotateY(0deg) translateZ(100px);
-}
-
-.back {
-  transform: rotateY(180deg) translateZ(100px);
-}
-
-.left {
-  transform: rotateY(-90deg) translateZ(100px);
-}
-
-.right {
-  transform: rotateY(90deg) translateZ(100px);
-}
-
-.top {
-  transform: rotateX(90deg) translateZ(100px);
-}
-
-.bottom {
-  transform: rotateX(-90deg) translateZ(100px);
-}
-
-@keyframes rotate {
-  from {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-  to {
-    transform: rotateX(360deg) rotateY(360deg);
-  }
 }/*# sourceMappingURL=style.css.map */
